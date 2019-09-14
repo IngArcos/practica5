@@ -1,8 +1,26 @@
 public class Cono{
-	public static void main(String[] args) {
+	private double radio, altura, volumenCono;
+	public static final double PI = 3.1416;
 
-	  double r = 10, h = 20, v = 0, PI = 3.1416f;
-	  v =(Math.PI*(r*r)*h)/3;
-	  System.out.println("Volumen: " + Math.round(v));
+	public Cono(double radio, double altura){
+		this.radio = radio;
+		this.altura = altura;
+	}
+
+	public double getRadio(){
+		return radio;
+	}
+
+	public void setRadio(double radio){
+		this.radio = radio;
+	}
+
+	public double getVolumenCono(){
+		return volumenCono;
+	}
+
+	public void volumen(){
+		volumenCono =(Math.PI*(radio*radio)*altura)/3;
+		//Utilizar Math.round(volumenCono));
 	}
 }
