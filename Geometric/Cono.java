@@ -17,6 +17,14 @@ public class Cono{
 		this.radio = radio;
 	}
 
+	public double getAltura(){
+		return altura;
+	}
+
+	public void setAltura(double altura){
+		this.altura = altura;
+	}
+
 	public double getVolumenCono(){
 		return volumenCono;
 	}
