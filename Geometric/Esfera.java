@@ -1,4 +1,6 @@
+package geometric;
 import java.lang.Math;
+
 public class Esfera{
   //private fields
   private float radio;
