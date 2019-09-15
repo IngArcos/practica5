@@ -7,35 +7,38 @@ public class Cliente{
   public static Esfera esfera = new Esfera(0f);
   public static Cono cono = new Cono(0f,0f);
   public static Prisma prisma = new Prisma(0f,0f,0f);
-  static boolean firstC = true, firstP = true, firstE = true;
 
   public static void main(String[] args) {
     int op=0;
     Scanner sc = new Scanner(System.in);
     //Despliege de menu
     while(op != 4){
-      System.out.println("¿Que desea hacer?: \n   1)Calcular area/volumen esfera\n   2)Calcular area/volumen prisma\n   3)Calcular area/volumen cono\n   4)Salir");
+      System.out.println("Qu\u00e9 desea hacer?: \n   1)Calcular area/volumen esfera\n   2)Calcular area/volumen prisma\n   3)Calcular area/volumen cono\n   4)Salir");
       op = sc.nextInt();
       if (op<1 || op>4) {
-        System.out.println("Opción incorrecta");
+        System.out.println("Opci\u00f3n incorrecta");
       } else {
         Cliente.setGeometricData(op);
         Cliente.getGeometricData(op);
       }
     }
+    //Fin de programa
     return;
   }
 
   public static void getGeometricData(int op) {
     switch (op) {
+      //Captura de datos esfera
       case 1:
         System.out.println("La esfera de radio "+esfera.getRadio()+", tiene:");
         System.out.println("\t Area: "+esfera.getArea()+"\n\t Volumen: "+esfera.getVolumen());
       break;
+      //Captura de datos prisma
       case 2:
-        System.out.println("El prisma de "+prisma.getNuml()+" lados (tamaño "+prisma.getLado()+") y altura "+prisma.getH()+", tiene:");
+        System.out.println("El prisma de "+prisma.getNuml()+" lados (tama\u00f1o "+prisma.getLado()+") y altura "+prisma.getH()+", tiene:");
         System.out.println("\t Area de la base: "+prisma.getAreaBase()+"\n\t Area de la superficie: "+prisma.getASup()+"\n\t Volumen: "+prisma.getV());
       break;
+      //Captura de datos cono
       case 3:
         System.out.println("El cono de radio "+cono.getRadio()+" de altura "+cono.getAltura()+", tiene:");
         System.out.println("\t Volumen: "+cono.getVolumenCono());
@@ -52,9 +55,9 @@ public class Cliente{
         esfera.setRadio((double)sc.nextInt());
       break;
       case 2:
-        System.out.print("De el número de lados: ");
+        System.out.print("De el n\u00famero de lados: ");
         prisma.setNuml((double)sc.nextInt());
-        System.out.print("De el tamaño del lado: ");
+        System.out.print("De el tama\u00f1o del lado: ");
         prisma.setLado((double)sc.nextInt());
         System.out.print("De la altura: ");
         prisma.setH((double)sc.nextInt());
