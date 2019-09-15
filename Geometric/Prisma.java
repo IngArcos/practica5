@@ -4,6 +4,11 @@ import static java.lang.Math.*;
 public class Prisma {
     private double numl,lado,h,v,aSup,areaBase;
     //Solo se consideran figuras equiláteras
+    public void prisma(double numl,double lado,double h){
+        this.numl=numl;//Número de lados, 1 se considera una circunferencia
+        this.lado=lado;//Tamaño del lado
+        this.h=h;//Altura
+    }
     public void setNuml(double numl){
         this.numl=numl;//Número de lados, 1 se considera una circunferencia
     }
