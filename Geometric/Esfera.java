@@ -33,11 +33,12 @@ public class Esfera{
     return volumen;
   }
 
-
+  //Volume method
   public void Volume(){
     volumen = 4/3*PI*radio*radio*radio;
   }
 
+  //Area method
   public void Area(){
     area = PI*radio*radio;
   }
