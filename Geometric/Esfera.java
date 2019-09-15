@@ -24,12 +24,12 @@ public class Esfera{
 
 
   //Accessor for area
-  public float getArea(){
+  public double getArea(){
     return area;
   }
 
   //Accessor for volume
-  public float getVolumen(){
+  public double getVolumen(){
     return volumen;
   }
 
