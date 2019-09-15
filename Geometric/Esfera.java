@@ -17,7 +17,7 @@ public class Esfera{
   }
 
 
-  //Set for radio
+  //Setter for radio
   public void setRadio(double radio){
 		this.radio = radio;
 	}
