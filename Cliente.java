@@ -4,68 +4,68 @@ import java.util.ArrayList;
 
 public class Cliente{
 
-  public static int op;
-  public static ArrayList geometric = new ArrayList();
+  public static Esfera esfera = new Esfera(0f);
+  public static Cono cono = new Cono(0f,0f);
+  public static Prisma prisma = new Prisma(0f,0f,0f);
   static boolean firstC = true, firstP = true, firstE = true;
 
   public static void main(String[] args) {
+    int op=0;
     Scanner sc = new Scanner(System.in);
     //Despliege de menu
-    while(Cliente.op != 4){
-      System.out.println("¿Que desea hacer?: \n   1) Crear/modificar esfera\n   2) Crear/modificar prisma\n   3) Crear/modificar cono\n   4) Salir");
-      Cliente.op = (sc.nextInt())-1;
-      switch (Cliente.op) {
-        case 0:
-          if(Cliente.firstE){
-            geometric.add(new Esfera(0));
-          } else {
-          }
-        break;
-        case 1:
-          if(Cliente.firstP){
-          } else {
-          }
-        break;
-        case 2:
-          if(Cliente.firstC){
-          } else {
-          }
-        break;
-        case 3:
-          sc.close();
-          return;
-        default:
-          System.out.println("Opción incorrecta");
+    while(op != 4){
+      System.out.println("¿Que desea hacer?: \n   1)Calcular area/volumen esfera\n   2)Calcular area/volumen prisma\n   3)Calcular area/volumen cono\n   4)Salir");
+      op = sc.nextInt();
+      if (op<1 || op>4) {
+        System.out.println("Opción incorrecta");
+      } else {
+        Cliente.setGeometricData(op);
+        Cliente.getGeometricData(op);
       }
     }
+    return;
   }
 
-  public void getGeometricData() {
-    switch (Cliente.op) {
-      case 0:
-        Cliente.geometric.get(0).getArea();
-      break;
+  public static void getGeometricData(int op) {
+    switch (op) {
       case 1:
-
+        System.out.println("La esfera de radio "+esfera.getRadio()+", tiene:");
+        System.out.println("\t Area: "+esfera.getArea()+"\n\t Volumen: "+esfera.getVolumen());
       break;
       case 2:
+        System.out.println("El prisma de "+prisma.getNuml()+" lados (tamaño "+prisma.getLado()+") y altura "+prisma.getH()+", tiene:");
+        System.out.println("\t Area de la base: "+prisma.getAreaBase()+"\n\t Area de la superficie: "+prisma.getASup()+"\n\t Volumen: "+prisma.getV());
+      break;
+      case 3:
+        System.out.println("El cono de radio "+cono.getRadio()+" de altura "+cono.getAltura()+", tiene:");
+        System.out.println("\t Volumen: "+cono.getVolumenCono());
       break;
     }
   }
 
 
-  public void setGeometricData() {
+  public static void setGeometricData(int op) {
     Scanner sc = new Scanner(System.in);
-    switch (Cliente.op) {
-      case 0:
-        System.out.println("De el nuevo radio: ");
-      break;
+    switch (op) {
       case 1:
+        System.out.print("De el radio: ");
+        esfera.setRadio((double)sc.nextInt());
       break;
       case 2:
+        System.out.print("De el número de lados: ");
+        prisma.setNuml((double)sc.nextInt());
+        System.out.print("De el tamaño del lado: ");
+        prisma.setLado((double)sc.nextInt());
+        System.out.print("De la altura: ");
+        prisma.setH((double)sc.nextInt());
+      break;
+      case 3:
+        System.out.print("De el radio de la base: ");
+        cono.setRadio((double)sc.nextInt());
+        System.out.print("De la altura: ");
+        cono.setAltura((double)sc.nextInt());
       break;
     }
   }
-
 
 }
