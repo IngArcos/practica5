@@ -1,4 +1,6 @@
+package geometric;
 import static java.lang.Math.*;
+
 public class Prisma {
     private double numl,lado,h,v,aSup,areaBase;
     //Solo se consideran figuras equiláteras
