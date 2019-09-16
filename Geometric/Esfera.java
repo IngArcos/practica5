@@ -25,13 +25,13 @@ public class Esfera{
 
   //Accessor for area
   public double getArea(){
-    this.area = PI*radio*radio;
+    this.area = (Math.PI)*radio*radio;
     return area;
   }
 
   //Accessor for volume
   public double getVolumen(){
-    this.volumen = 4/3*PI*radio*radio*radio;
+    this.volumen = 4/3*(Math.PI)*radio*radio*radio;
     return volumen;
   }
 
