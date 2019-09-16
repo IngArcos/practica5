@@ -1,7 +1,7 @@
 package geometric;
 
 public class Cono{
-	private double radio, altura, volumenCono;
+	private double radio, altura, volumenCono, areaSuperficial;
 	public static final double PI = 3.1416;
 
 	public Cono(double radio, double altura){
@@ -26,11 +26,14 @@ public class Cono{
 	}
 
 	public double getVolumenCono(){
+		this.volumenCono =(Math.PI*(radio*radio)*altura)/3;
 		return volumenCono;
 	}
 
-	public void volumen(){
-		volumenCono =(Math.PI*(radio*radio)*altura)/3;
-		//Utilizar Math.round(volumenCono));
+	public double getAreaSuperficial(){
+		this.areaSuperficial = Math.PI*(radio*altura)+Math.PI*(radio*radio);
+		return areaSuperficial;
 	}
+
+
 }
