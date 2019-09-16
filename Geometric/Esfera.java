@@ -25,7 +25,7 @@ public class Esfera{
 
   //Accessor for area
   public double getArea(){
-    this.area = 4*PI*radio*radio;
+    this.area = PI*radio*radio;
     return area;
   }
 
