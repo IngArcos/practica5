@@ -41,7 +41,7 @@ public class Cliente{
       //Captura de datos cono
       case 3:
         System.out.println("El cono de radio "+cono.getRadio()+" de altura "+cono.getAltura()+", tiene:");
-        System.out.println("\t Volumen: "+cono.getVolumenCono());
+        System.out.println("\t Volumen: "+cono.getVolumenCono()+"\n\t Area: "+cono.getAreaSuperficial());
       break;
     }
   }
