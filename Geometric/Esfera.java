@@ -9,8 +9,7 @@ public class Esfera{
   //Constructor method
   public Esfera(double radio){
     this.radio= radio;
-    this.Volume();
-    this.Area();
+
   }
 
   //Accessor for radio
@@ -21,28 +20,21 @@ public class Esfera{
   //Setter for radio
   public void setRadio(double radio){
 		this.radio = radio;
-    this.Volume();
-    this.Area();
+
 	}
 
   //Accessor for area
   public double getArea(){
+    this.area = 4*PI*radio*radio;
     return area;
   }
 
   //Accessor for volume
   public double getVolumen(){
+    this.volumen = 4/3*PI*radio*radio*radio;
     return volumen;
   }
 
-  //Volume method
-  public void Volume(){
-    volumen = 4/3*PI*radio*radio*radio;
-  }
 
-  //Area method
-  public void Area(){
-    area = 4*PI*radio*radio;
-  }
 
 }
